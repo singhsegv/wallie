@@ -3,6 +3,8 @@ package io.github.rajdeep1008.wallie;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import org.knowm.xchange.vaultoro.VaultoroExchange;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
