@@ -20,11 +20,11 @@ android {
     configurations.all {
         resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
     }
-        packagingOptions {
-            pickFirst 'META-INF/*'
-            pickFirst 'META-INF/LICENSE'
-            pickFirst 'META-INF/io.netty.versions.properties'
-        }
+    packagingOptions {
+        pickFirst 'META-INF/*'
+        pickFirst 'META-INF/LICENSE'
+        pickFirst 'META-INF/io.netty.versions.properties'
+    }
 }
 
 repositories {
@@ -40,10 +40,6 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:design:25.0.0'
-    testCompile 'junit:junit:4.12'
 
     compile("org.knowm.xchange:xchange-core:$XCHANGE_VERSION")
 
@@ -93,7 +89,8 @@ dependencies {
     compile("org.knowm.xchange:xchange-okcoin:$XCHANGE_VERSION")
     //compile("org.knowm.xchange:xchange-openexchangerates:$XCHANGE_VERSION")
     compile("org.knowm.xchange:xchange-paymium:$XCHANGE_VERSION")
-    compile("org.knowm.xchange:xchange-poloniex:$XCHANGE_VERSION")// exchange.getExchangeSymbols() broken
+    compile("org.knowm.xchange:xchange-poloniex:$XCHANGE_VERSION")
+// exchange.getExchangeSymbols() broken
     compile("org.knowm.xchange:xchange-quadrigacx:$XCHANGE_VERSION")
     compile("org.knowm.xchange:xchange-quoine:$XCHANGE_VERSION")
     //compile("org.knowm.xchange:xchange-ripple:$XCHANGE_VERSION")
@@ -102,4 +99,8 @@ dependencies {
     compile("org.knowm.xchange:xchange-vaultoro:$XCHANGE_VERSION")
     //compile("org.knowm.xchange:xchange-vircurex:$XCHANGE_VERSION")
     //compile("org.knowm.xchange:xchange-yobit:$XCHANGE_VERSION")
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.0.0'
+    testCompile 'junit:junit:4.12'
 }
